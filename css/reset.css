@@ -1,0 +1,525 @@
+
+#wrap{width:100%;
+    background: 
+    linear-gradient(106.32deg, rgba(216, 222, 232, 0.5) 1.41%, 
+    rgba(211, 240, 247, 0.5) 12.93%, 
+    rgba(238, 241, 250, 0.5) 37.45%,
+     rgba(175, 200, 231, 0.5) 79.59%, 
+     rgba(239, 244, 233, 0.5) 98.96%), 
+     rgb(255, 255, 255);
+}
+
+#wrap > section > div{ width: 100%; }
+#wrap >  div > div,
+#wrap > section >  div > div{margin: 0 auto; width: 1500px;  height: 100vh;
+                  /* background-color:rgba(255, 244, 146, 0.5); */
+                  }
+#header {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    width: 100%; 
+    height: 100px;
+ } 
+
+#header .logo { 
+        /* margin-left: 20px; */
+        width: 180px;
+        height: 80px;  
+        color: #716E64;
+        text-align: center;
+        line-height: 80px;
+        font-size: 35px;
+} 
+
+#header .nav { 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#header .nav li {
+     margin-right: 50px;
+}
+
+#header .nav a {
+    font-size: 20px; 
+    font-weight: 600; 
+    color:#716E64;
+}
+
+#header .nav li.on a {color:#000;}
+
+
+
+#main h2 {
+    font-family: 'Ubuntu', sans-serif;
+    width: 100%; 
+    font-size:90px; 
+    color: rgb(131, 160, 240);
+    margin-bottom: 15px;
+}
+
+#main h3 {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 70px;
+    width: 100%;
+    color: rgb(124, 150, 221);
+}
+
+#main p {
+    font-size:20px;
+    text-align: right;
+    color: #D6CBC2;
+    font-weight: 600;
+}
+
+.main_circle {
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    background: 
+    linear-gradient(130deg, rgba(88, 116, 161, 0.5) 1.41%, 
+    rgba(238, 241, 250, 0.5) 55%,
+    rgba(107, 137, 174, 0.5) 79.59%, 
+    rgba(181, 186, 176, 0.5) 90%), 
+    rgb(255, 255, 255);
+    box-shadow: 5px 10px 25px 10px rgba(5, 1, 28, 0.1);
+}
+
+
+
+.main_title {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+}
+
+
+
+.in_profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* 
+.profile_circle > img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+} */
+
+.card {
+    width: 400px;
+    height: 450px;
+    border-radius: 50%;
+    margin-right: 15px;
+    position: relative;
+    float: left;
+    perspective:600px; /*3_카드가 돌아갈때 원근법을 주기 위해-앞 뒷면 돌아가는 걸 보기 위해 부모에게 적용*/
+  }
+
+  .card .face {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 450px;
+    border-radius: 50%;
+    transition:1s;
+    position: absolute;  
+    backface-visibility:hidden; /*1_로고의 뒷면이나, 뒷카드의 앞면 둘다 숨겨져 있어야 함.*/
+    background: 
+    linear-gradient(160deg, rgba(157, 183, 225, 0.5) 1.41%, 
+    rgba(238, 241, 250, 0.5) 55%,
+    rgba(147, 172, 203, 0.5) 79.59%, 
+    rgba(174, 182, 190, 0.5) 90%), 
+    rgb(255, 255, 255);
+    box-shadow: 1px 2px 25px 7px rgba(5, 1, 28, 0.1);
+  }
+  .card .face-front {
+    transform: rotateY(0deg);
+  }
+  .card:hover .face-front{
+    transform: rotateY(-180deg);
+  }
+  .card .face-back {
+    transform: rotateY(180deg);/*2_뒷카드는 뒤집혀있어야 하므로 Y축으로 180도 돌려서 안보이게 처리*/
+    overflow: hidden;
+  }
+  .card:hover .face-back{
+    transform: rotateY(0deg);
+  }
+  
+  .card .face-front img{
+    width: 100%;
+    border-radius: 50%;
+
+    opacity:.9;
+  }
+  .card .face-back img{
+    width: 100%;
+}
+
+.profile_wrap {
+    width: 40%;
+}
+
+.profile_title {
+    margin-bottom: 20px;
+
+}
+
+.profile_title > h2 {
+    font-size: 40px;
+    font-weight: 400;
+    font-family: 'Jua', sans-serif;
+}
+
+.profile_title > h3 {
+    font-size: 30px;
+    font-weight: 400;
+    font-family: 'Jua', sans-serif;
+}
+
+.profile_text {
+    margin-top: 10px;
+    color: #413f3f;;
+}
+
+.profile_text > p {
+    font-size: 25px;
+    font-family: 'Jua', sans-serif;
+}
+
+.profile_text > p > span {
+    font-size: 30px;
+}
+
+.profile_contents {
+    padding: 10px;
+}
+
+.text_contents {
+    display: flex;
+    align-items: center;
+    padding: 3px 0;
+}
+
+.text_contents.profile > i {
+    margin-right: 5px;
+    font-size: 22px;
+}
+
+.text_contents.profile > p {
+    font-size: 20px;
+    font-family: 'Jua', sans-serif;
+}
+
+.text_contents.profile > i,
+.text_contents.profile > p {
+    color: #413f3f;
+    
+}
+
+
+#q_mn{
+    position: absolute; 
+    right:20px; 
+    top: 300px; 
+    padding: 20px;
+    z-index: 9999;
+    width:120px;
+    height:200px; 
+    border-radius: 6px;
+    background-color: rgba(255, 255, 255, 0.625);
+}
+
+#q_mn ul.nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#q_mn ul.nav li{ 
+    margin-bottom:10px;
+}   
+
+#q_mn ul.nav li a{
+    color: #716e649f
+}
+
+#q_mn ul.nav li a:hover {
+    color: rgb(57, 74, 169);
+    transition: all 0.3s;
+}
+
+#q_mn ul.nav li.on a{ 
+    color: rgb(15, 15, 15);
+}
+
+#skill{
+    position: relative;
+}
+
+
+
+.skill_circle {
+    position: absolute;
+    top: 0;
+    left: 15%;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: 
+    linear-gradient(150deg, rgba(114, 140, 182, 0.5) 1.41%, 
+    rgba(225, 229, 244, 0.5) 55%,
+    rgba(180, 190, 218, 0.5) 75%, 
+    rgba(181, 186, 176, 0.5) 90%), 
+    rgb(255, 255, 255);
+    box-shadow: 7px 8px 25px 8px rgba(32, 32, 33, 0.1);
+}
+
+.in_skill > span {
+    position: absolute;
+    top: 12%;
+    left: 20%;
+    font-size: 45px;
+    color: rgb(131, 160, 240);
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 600;
+}
+
+#skill .in_skill{ 
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+}
+
+#skill .skill_list > li{
+    float: left; 
+    margin-right: 100px; 
+    text-align: center;
+}
+#skill .skill_list > li > div{ 
+    position: relative; 
+    width: 70px;
+    height:450px; 
+    /* border:1px solid rgb(212, 210, 210); */
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 5px 10px 25px 10px rgba(5, 1, 28, 0.1);
+}
+
+#skill .skill_list > li > div > .in_box{
+    position: absolute; 
+    top:450px; 
+    left: 0; 
+    width: 70px; 
+    height:450px; 
+    background: 
+    linear-gradient(130deg, rgba(181, 206, 221, 0.5) 1.41%, 
+    rgba(212, 219, 243, 0.5) 55%,
+    rgba(159, 184, 214, 0.5) 79.59%), 
+    rgb(255, 255, 255);
+    font-size: 14px;
+    color: #716E64;
+}
+
+#skill .skill_list > li > h5 {
+    font-size: 14px;
+    color: rgb(44, 71, 225);
+    margin-top: 15px;
+}
+
+#project{
+    position: relative;
+}        
+
+#project .in_project {
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+}
+
+.project_circle {
+    position: absolute;
+    top: 0;
+    right: 12.5%;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: 
+    linear-gradient(160deg, rgba(157, 183, 225, 0.5) 1.41%, 
+    rgba(238, 241, 250, 0.5) 55%,
+    rgba(147, 172, 203, 0.5) 79.59%, 
+    rgba(174, 182, 190, 0.5) 90%), 
+    rgb(255, 255, 255);
+    box-shadow: 5px 7px 20px 5px rgba(152, 151, 153, 0.1);
+}
+
+.in_project > span {
+    position: absolute;
+    top: 13%;
+    right: 16%;
+    font-size: 40px;
+    color: rgb(131, 160, 240);
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 600;
+}
+
+#project .list > div{
+    width: 500px; 
+    height: 600px;
+}
+
+.list {
+    display: flex;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, .4);
+}
+
+#project .output{ 
+    background-size: 100%;
+    padding: 10px;
+}
+
+#project .output > img{
+    width: 100%; 
+    height: 100%; 
+    border-radius: 5px;
+}  
+
+.project_text {
+    padding: 15px 25px;
+}
+
+.project_text_contents.title > p {
+    font-size: 35px;
+    font-weight: 700;
+    text-align: center;
+    font-family: 'Gowun Dodum', sans-serif;
+}
+
+.project_text_wrap {
+    margin-top: 50px;
+}
+
+.project_text_contents {
+    padding: 10px 0;
+}
+
+.project_text_contents > i {
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+.project_text_contents > span {
+    font-size: 25px;
+    font-family: 'Gowun Dodum', sans-serif;
+    font-weight: 600;
+}
+
+.project_text_contents > p,
+.project_text_contents > div > a {
+    padding: 2px 0;
+    font-size: 20px;
+    font-weight: 600;
+    
+}
+
+#wrap > div > div.in_end {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #716E64; */
+}
+
+
+.end_circle {
+    position: absolute;
+    top:8%;
+    left: 15%;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: 
+    linear-gradient(130deg, rgba(88, 116, 161, 0.5) 1.41%, 
+    rgba(238, 241, 250, 0.5) 55%,
+    rgba(107, 137, 174, 0.5) 79.59%, 
+    rgba(181, 186, 176, 0.5) 90%), 
+    rgb(255, 255, 255);
+}
+
+.in_end > span {
+    position: absolute;
+    top: 22%;
+    left: 19%;
+    font-size: 40px;
+    color: rgb(131, 160, 240);
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 600;
+}
+
+#form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 800px;
+    padding: 50px 20px;
+    background-color: rgba(255, 255, 255, .4);
+}
+
+.form_box {
+    min-width: 300px;
+}
+
+
+.field {
+    margin-bottom: 10px;
+
+}
+
+.field label {
+    display: block;
+    margin-bottom: 3px;
+    font-size: 14px;
+    color: #777;
+}
+
+
+
+.field input {
+    display: block;
+    width: 100%;
+    height: 36px;
+    padding: 7px;
+    outline: none;
+    border: none;
+    line-height: 1.5;
+    font-size: 14px;
+}
+
+input[name="message"] {
+    height: 100px;
+}
+
+input[type="submit"] {
+    width: 100%;
+    display: block;
+    padding: 6px 30px;
+    background-color: #4460AA;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
